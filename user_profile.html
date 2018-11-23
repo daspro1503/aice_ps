@@ -1,0 +1,150 @@
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IREPORTER</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+</head>
+<body>
+        <nav>
+                
+                <ul>
+        
+                    <li><a href=""><b>HOME</b></a></li>
+        
+                    <li><a href="enter_intervention.html"><b>INTERVENTION</b></a></li>
+                    <li><a href="enter_redflag.html"><b>RED FLAGS</b></a></li>
+        
+                   
+        
+                </ul>
+        
+            </nav> <h1  style="color: rgb(229, 229, 238);text-shadow: rgb(94, 142, 204) 0 0 10px, #FF0000 5px 5px 5px;">I REPORTER </h1>   
+       <div class="container">
+                <h2>USER PROFILE</h2>
+                <p>Click on the button to veiw the required category of records</p>
+                
+                <div class="tab">
+                  <button class="tablinks" onclick="openCity(event, 'red flag')" id ="defaultOpen">Resolved red flags</button>
+                  <button class="tablinks" onclick="openCity(event, 'intervention')">Resolved interventions</button>
+                  <button class="tablinks" onclick="openCity(event, 'r_redflag')">Rejected Red Flags</button>
+                <button class='tablinks' onclick="openCity(event,'r_intervention')">Rejected Interventions</button>
+                </div>
+                
+                <div id="red flag" class="tabcontent">
+                        <table id="tbl">
+                                <tr>
+                                  <th>RED FLAG</th>
+                                  <th>DATE</th>
+                                  <th>LOCATION</th>
+                                  <th>EDIT</th>
+                                  <th>DELETE</th>
+                                </tr>
+                                <tr>
+                                  <td>students loan mis use</td>
+                                  <td>21st/04/2018</td>
+                                  <td>Masaka</td>
+                                  <td><button>edit</button></td>
+                                  <td><button>delete</button></td>
+                                </tr>
+                                <tr>
+                                        <td>students loan mis use</td>
+                                        <td>21st/04/2018</td>
+                                        <td>Masaka</td>
+                                        <td><button>edit</button></td>
+                                        <td><button>delete</button></td>
+                                      </tr>
+                              </table>
+                              
+                </div>
+                
+                <div id="intervention" class="tabcontent">
+                        <table id="tbl">
+                                <tr>
+                                  <th>INTERVENTION</th>
+                                  <th>DATE</th>
+                                  <th>LOCATION</th>
+                                  <th>EDIT</th>
+                                  <th>DELETE</th>
+                                </tr>
+                                <tr>
+                                  <td>students loan mis use</td>
+                                  <td>21st/04/2018</td>
+                                  <td>Masaka</td>
+                                  <td><button>edit</button></td>
+                                  <td><button>delete</button></td>
+                                </tr>
+                                <tr>
+                                        <td>students loan mis use</td>
+                                        <td>21st/04/2018</td>
+                                        <td>Masaka</td>
+                                        <td><button>edit</button></td>
+                                        <td><button>delete</button></td>
+                                      </tr>
+                              </table>
+                </div>
+                
+                <div id="r_redflag" class="tabcontent">
+                        <table id="tbl">
+                                <tr>
+                                  <th>RED FLAGS</th>
+                                  <th>DATE</th>
+                                  <th>LOCATION</th>
+                                  
+                                </tr>
+                                <tr>
+                                  <td>students loan mis use</td>
+                                  <td>21st/04/2018</td>
+                                  <td>Masaka</td>
+                                  
+                                </tr>
+                                <tr>
+                                        <td>students loan mis use</td>
+                                        <td>21st/04/2018</td>
+                                        <td>Masaka</td>
+                                        
+                                      </tr>
+                              </table>
+                </div>
+                <div id="r_intervention" class="tabcontent">
+                        <table id="tbl">
+                                <tr>
+                                  <th>INTERVENTION</th>
+                                  <th>DATE</th>
+                                  <th>LOCATION</th>
+                                  
+                                </tr>
+                                <tr>
+                                  <td>students loan mis use</td>
+                                  <td>21st/04/2018</td>
+                                  <td>Masaka</td>
+                                  
+                                </tr>
+                                <tr>
+                                        <td>students loan mis use</td>
+                                        <td>21st/04/2018</td>
+                                        <td>Masaka</td>
+                                        
+                                      </tr>
+                              </table>
+                </div>
+            </div>
+            <script>
+                    function openCity(evt, cityName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                            tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                            tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+                        document.getElementById(cityName).style.display = "block";
+                        evt.currentTarget.className += " active";
+                    }
+                    
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen").click();
+                    </script>
+                         
+</body>

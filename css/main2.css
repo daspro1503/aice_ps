@@ -14,7 +14,14 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 button {
     background-color: rgb(39, 75, 155);
     color: white;
@@ -48,7 +55,7 @@ img.avatar {
 
 .container {
     padding: 16px;
-   
+   width:50%;
 }
 
 span.psw {

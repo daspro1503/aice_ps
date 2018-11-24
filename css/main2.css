@@ -5,22 +5,20 @@ body {font-family: Arial, Helvetica, sans-serif;
     background-image: filter:blur(5px);
 }
 form {border: 1px solid #f1f1f1;}
-
 nav {
 
-    background-color: rgb(183, 174, 238);
+    background-color:rgb(229, 233, 240);
 
     margin: 0;
 
     overflow: hidden;
-    border-radius: 12px;
-}
+
 }
 nav ul{
     margin: 0;
-
+height: 2px;
     padding: 0;
-
+width:100%;
 }
 
 nav ul li {
@@ -31,19 +29,22 @@ nav ul li {
 }
 
 nav > ul > li > a {
-    border-radius: 12px;
-    color: rgb(214, 45, 45);
+    border-radius: 2px;
 
-    background-color:rgb(243, 243, 240);
+    color:grey;
 
+    background-color:rgb(229, 233, 240);
+    border-color:grey;
+    border-width:2px;
     display: block;
     line-height: 2em;
 
     padding: 0.5em 0.5em;
-
+    margin: 2px;
     text-decoration: none;
 
 }
+
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -110,4 +111,3 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
-    

@@ -11,7 +11,10 @@ background-repeat: no-repeat;
     
 }
 * {box-sizing: border-box}
-
+.mbtn {
+    
+    background-color: #f44336;
+}
 input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
@@ -89,43 +92,9 @@ button:hover {
     }
 
 }
-nav {
 
-    background-color: rgb(183, 174, 238);
 
-    margin: 0;
 
-    overflow: hidden;
-
-}
-nav ul{
-    margin: 0;
-
-    padding: 0;
-
-}
-
-nav ul li {
-
-    display: inline-block;
-    list-style-type: none;
-   
-}
-
-nav > ul > li > a {
-
-    color: rgb(214, 45, 45);
-
-    //background-color:rgb(243, 243, 240);
-
-    display: block;
-    line-height: 2em;
-
-    padding: 0.5em 0.5em;
-
-    text-decoration: none;
-
-}
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -185,4 +154,44 @@ nav > ul > li > a {
     text-align: left;
     background-color: rgb(42, 72, 156);
     color: white;
+}
+
+nav {
+
+    background-color:rgb(229, 233, 240);
+
+    margin: 0;
+
+    overflow: hidden;
+
+}
+nav ul{
+    margin: 0;
+
+    padding: 0;
+width:100%;
+}
+
+nav ul li {
+
+    display: inline-block;
+    list-style-type: none;
+   
+}
+
+nav > ul > li > a {
+    border-radius: 2px;
+
+    color:grey;
+
+    background-color:rgb(229, 233, 240);
+    border-color:grey;
+    border-width:2px;
+    display: block;
+    line-height: 2em;
+
+    padding: 0.5em 0.5em;
+    margin: 2px;
+    text-decoration: none;
+
 }

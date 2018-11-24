@@ -6,6 +6,44 @@ body {font-family: Arial, Helvetica, sans-serif;
 }
 form {border: 1px solid #f1f1f1;}
 
+nav {
+
+    background-color: rgb(183, 174, 238);
+
+    margin: 0;
+
+    overflow: hidden;
+    border-radius: 12px;
+}
+}
+nav ul{
+    margin: 0;
+
+    padding: 0;
+
+}
+
+nav ul li {
+
+    display: inline-block;
+    list-style-type: none;
+   
+}
+
+nav > ul > li > a {
+    border-radius: 12px;
+    color: rgb(214, 45, 45);
+
+    background-color:rgb(243, 243, 240);
+
+    display: block;
+    line-height: 2em;
+
+    padding: 0.5em 0.5em;
+
+    text-decoration: none;
+
+}
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -72,3 +110,4 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
+    

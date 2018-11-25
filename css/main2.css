@@ -5,6 +5,45 @@ body {font-family: Arial, Helvetica, sans-serif;
     background-image: filter:blur(5px);
 }
 form {border: 1px solid #f1f1f1;}
+nav {
+
+    background-color:rgb(229, 233, 240);
+
+    margin: 0;
+
+    overflow: hidden;
+
+}
+nav ul{
+    margin: 0;
+height: 2px;
+    padding: 0;
+width:100%;
+}
+
+nav ul li {
+
+    display: inline-block;
+    list-style-type: none;
+   
+}
+
+nav > ul > li > a {
+    border-radius: 2px;
+
+    color:grey;
+
+    background-color:rgb(229, 233, 240);
+    border-color:grey;
+    border-width:2px;
+    display: block;
+    line-height: 2em;
+
+    padding: 0.5em 0.5em;
+    margin: 2px;
+    text-decoration: none;
+
+}
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -14,7 +53,14 @@ input[type=text], input[type=password] {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 button {
     background-color: rgb(39, 75, 155);
     color: white;
@@ -48,7 +94,7 @@ img.avatar {
 
 .container {
     padding: 16px;
-   
+   width:50%;
 }
 
 span.psw {

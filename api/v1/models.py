@@ -16,12 +16,12 @@ class ireporter(object):
         if username=="" or password=="":
             return {"status":"401","Data":"username or password is missing please enter the missing details and try again"}
         
-        elif fname=="":stat
-            return {"status":"401""Data":"first name is missing please enter the missing details and try again"}
+        elif fname=="":
+            return {"status":"401","Data":"first name is missing please enter the missing details and try again"}
         elif phonenumber=="":
-            return"{"Phone number is missing please enter the missing details and try again"}
+            return {"status":"401","Data":"Phone number is missing please enter the missing details and try again"}
         elif match==None:
-            return "Email entered is invalid please enter a valid email and try again"
+            return {"status":"401","Data":"Email entered is invalid please enter a valid email and try again"}
         else:
             if username!=self.default_admin or password!=self.default_admin:
                 isAdmin=False
@@ -30,7 +30,7 @@ class ireporter(object):
             for user_dict in self.users:
                 for keys,value in user_dict.items():
                     if user_dict['username']==username:
-                        return "Username already in use please try another username"
+                        return {"status":"401","Data":"Username already in use please try another username"}
                         exists1=True
                         break
                 break
@@ -39,7 +39,7 @@ class ireporter(object):
                 for user_dict in self.users:
                     for keys,value in user_dict.items():
                         if user_dict['phonenumber']==phonenumber:
-                            return "Phone number already registered please use another phone number"
+                            return {"status":"401","Data":"Phone number already registered please use another phone number"}
                             exists_phone_number=True
                             break
                     break
@@ -47,7 +47,7 @@ class ireporter(object):
                  for user_dict in self.users:
                     for keys,value in user_dict.items():
                         if user_dict['email']==email:
-                            return "Email already registered please use another email and try again"
+                            return {"status":"401","Data":"Email already registered please use another email and try again"}
                             exists_email=True
                             break
                     break
@@ -73,12 +73,12 @@ class ireporter(object):
                     break
             break
         if registered_user==False:
-            return"CreatedBy contains an unknown user please enter a valid username and try again"
+            return {"status":"401","Data":"CreatedBy contains an unknown user please enter a valid username and try again"}
         if registered_user==True:
             if comment=="":
-                return"Please enter the details of the incident and try again"
+                return {"status":"401","Data":"Please enter the details of the incident and try again"}
             elif i_type=="" or i_type!="redflag":
-                return "please enter a valid type of the incident and try again"
+                return {"status":"401","Data":"please enter a valid type of the incident and try again"}
             else:
 
                 self.id=len(self.incident)+1
@@ -96,7 +96,7 @@ class ireporter(object):
                     break
             break
         if registered_user==False:
-            return"CreatedBy contains an unknown user please enter a valid username and try again"
+            return{"status":"401","Data":"CreatedBy contains an unknown user please enter a valid username and try again"}
         if registered_user==True:
             for user_dict in self.incident:
                 for keys,value in user_dict.items():
@@ -117,7 +117,7 @@ class ireporter(object):
                     break
             break
         if registered_user==False:
-            return"CreatedBy contains an unknown user please enter a valid username and try again"
+            return {"status":"401","Data":"CreatedBy contains an unknown user please enter a valid username and try again"}
         if registered_user==True:
             return self.incident
     def patch_record(self,id,rtype,value):

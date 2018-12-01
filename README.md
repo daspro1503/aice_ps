@@ -1,2 +1,2 @@
 # i-reporter
-pre bootcamp project for reporting corruption cases
+python api end points 

@@ -71,6 +71,7 @@ def edit_location(id):
         #response=Response("d",201,mimetype="application/json")
         return jsonify({'data':reply})   
 @app.route('/api/v1/edit_comment/<int:id>', methods = ['PATCH'])
+@token_required
 def edit_comment(id):
     
     request_data=request.get_json()

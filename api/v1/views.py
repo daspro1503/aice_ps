@@ -1,8 +1,31 @@
 from flask import Flask,jsonify,request,Response
 import models
+import jwt
+import datetime
+from functools import wraps
 app=Flask(__name__) 
 test=models.ireporter()
-    
+app.config['SECRET_KEY']='Api2019'
+def token_required(f):
+    @wraps(f)
+    def decorated(*args,**kwargs):
+        token=request.args.get('token')
+        if not token:
+            return jsonify({'message':'Token is missing!'}),403
+        try:
+            data=jwt.decode(token,app.config['SECRET_KEY'])
+        except:
+            return jsonify({'message':'Token is invalid'}),403
+        return f(args,**kwargs)
+    return decorated
+@app.route('/api/v1/login',methods=['POST'])  
+def login():
+    auth=request.authorization
+    if auth and auth.password=='password':
+        token = jwt.encode({'user':auth.username,'exp':datetime.datetime.utcnow() + datetime.timedelta(minutes=30)},app.config['SECRET_KEY'])
+        return jsonify({'token':token.decode('UTF-8')})
+
+    return jsonify({"status":"401","Data":"Phone number already registered please use another phone number"}),401
 @app.route('/api/v1/signup', methods = ['POST'])
 def sign_up():
     request_data=request.get_json()
@@ -11,7 +34,7 @@ def sign_up():
     else:
         reply=test.signup(request_data['firstname'],request_data['lastname'],request_data['othername'],request_data['email'],request_data['phonenumber'],request_data['username'],request_data['password'])       
         
-        return jsonify(reply)
+        return reply
 
 @app.route('/api/v1/red-flag', methods = ['POST'])
 def create_red_flag():
@@ -25,6 +48,7 @@ def create_red_flag():
         return jsonify({'data':reply})    
 
 @app.route('/api/v1/all_red-flags', methods = ['GET'])
+@token_required
 def get_all_redflags():
     request_data=request.get_json()
     if not request.json :
